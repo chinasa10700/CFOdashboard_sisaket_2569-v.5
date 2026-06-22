@@ -1205,19 +1205,6 @@ function renderPlanDetailTable(mi){
 // ============================================================
 // UI HELPERS
 // ============================================================
-function switchTab(idx){
-  document.querySelectorAll('.tab-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
-  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
-}
-function toggleSection(id,btn){
-  const el=document.getElementById(id);
-  const isOpen=el.style.display!=='none';
-  el.style.display=isOpen?'none':'block';
-  if(btn)btn.textContent=isOpen?'🔍 ดูรายละเอียด':'🔼 ซ่อนรายละเอียด';
-}
-function closeModal(){document.getElementById('detailModal').classList.remove('open');}
-</script>
-<script data-goatcounter="https://chinasa10700.goatcounter.com/count" async src="//gc.zgo.at/count.js">
 // ============================================================
 // TAB 6: TPS Score
 // ============================================================
@@ -1347,6 +1334,20 @@ function renderTab6(){
     }).filter(Boolean).join('');
 }
 
+
+function switchTab(idx){
+  document.querySelectorAll('.tab-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+}
+function toggleSection(id,btn){
+  const el=document.getElementById(id);
+  const isOpen=el.style.display!=='none';
+  el.style.display=isOpen?'none':'block';
+  if(btn)btn.textContent=isOpen?'🔍 ดูรายละเอียด':'🔼 ซ่อนรายละเอียด';
+}
+function closeModal(){document.getElementById('detailModal').classList.remove('open');}
+</script>
+<script data-goatcounter="https://chinasa10700.goatcounter.com/count" async src="//gc.zgo.at/count.js">
 </script>
 </body>
 </html>
